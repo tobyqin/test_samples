@@ -16,6 +16,7 @@ content = ''
 test_file = 'tests.py'
 counter = {'passed': 0, 'failed': 0, 'skipped': 0}
 error_types = ['SystemError', 'AssertionError', 'ValueError', 'KeyError', 'EnvironmentError']
+test_count = 100
 
 
 def log_some_message():
@@ -87,7 +88,7 @@ def add_fail_test():
 def prepare():
     content = get_test_template()
 
-    for i in range(100):
+    for i in range(test_count):
         if fake.boolean(80):
             content += add_pass_test()
         if fake.boolean(10):
