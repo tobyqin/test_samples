@@ -16,11 +16,11 @@ content = ''
 test_file = 'tests.py'
 counter = {'passed': 0, 'failed': 0, 'skipped': 0}
 error_types = ['SystemError', 'AssertionError', 'ValueError', 'KeyError', 'EnvironmentError']
-test_count = 100
+test_count = 10
 
 
 def log_some_message():
-    for i in range(fake.random_int(10)):
+    for i in range(fake.random.randint(10, 30)):
         if fake.boolean(80):
             logging.info(fake.sentence())
         if fake.boolean(10):
