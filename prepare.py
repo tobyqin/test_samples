@@ -55,7 +55,6 @@ def add_pass_test():
     tpl = """    def test_pass_{}(self):
         log_some_message()
         wait_some_time()
-        print('hello, test 哈哈')
         self.assertEqual(10, 7 + 3)
 
 """
