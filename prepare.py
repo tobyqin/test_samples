@@ -22,7 +22,7 @@ test_count = 100
 def log_some_message():
     for i in range(fake.random_int(10)):
         if fake.boolean(80):
-            logging.info(fake.text())
+            logging.info(fake.sentence())
         if fake.boolean(10):
             logging.warning(fake.text())
         if fake.boolean(5):
@@ -30,7 +30,7 @@ def log_some_message():
 
 
 def wait_some_time():
-    seconds = fake.random_int(200) / 100
+    seconds = fake.random.randint(50, 200) / 100
     sleep(seconds)
 
 
