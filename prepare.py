@@ -87,7 +87,7 @@ def add_fail_test():
 def prepare():
     content = get_test_template()
 
-    for i in range(fake.random_int(50)):
+    for i in range(100):
         if fake.boolean(80):
             content += add_pass_test()
         if fake.boolean(10):
