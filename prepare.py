@@ -16,7 +16,7 @@ content = ''
 test_file = 'tests.py'
 counter = {'passed': 0, 'failed': 0, 'skipped': 0}
 error_types = ['SystemError', 'AssertionError', 'ValueError', 'KeyError', 'EnvironmentError']
-test_count = 10
+test_count = 80
 
 
 def log_some_message():
