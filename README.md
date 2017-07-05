@@ -3,7 +3,7 @@ To generate sample test results.
 
 ```shell
 # install requirements
-pip install requirements.txt -r
+pip install -r requirements.txt
 
 # generate tests.py
 python prepare.py
