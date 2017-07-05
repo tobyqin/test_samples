@@ -34,7 +34,7 @@ def wait_some_time():
 
 
 def get_test_template():
-    return """# -*- coding: utf-8 -*-
+    return u"""# -*- coding: utf-8 -*-
 '''
 To generate xml:
 py.test --junitxml results.xml tests.py
@@ -52,7 +52,7 @@ class SimpleTest(unittest.TestCase):
 
 
 def add_pass_test():
-    tpl = """    def test_pass_{}(self):
+    tpl = u"""    def test_pass_{}(self):
         log_some_message()
         wait_some_time()
         self.assertEqual(10, 7 + 3)
@@ -63,7 +63,7 @@ def add_pass_test():
 
 
 def add_skip_test():
-    tpl = """    @unittest.skip("{}")
+    tpl = u"""    @unittest.skip("{}")
     def test_skipped_{}(self):
         self.fail("shouldn't happen")
 
@@ -73,7 +73,7 @@ def add_skip_test():
 
 
 def add_fail_test():
-    tpl = """    def test_fail_{}(self):
+    tpl = u"""    def test_fail_{}(self):
         log_some_message()
         wait_some_time()
         raise {}('{}')
